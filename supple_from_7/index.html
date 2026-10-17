@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Supple from 7: loja gamer de periféricos, hardware e acessórios.">
+  <title>Supple from 7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">⚡ OFERTAS GAMER • FRETE GRÁTIS ACIMA DE R$ 299</div>
+  <header class="header">
+    <a class="logo" href="#inicio"><span class="logo-icon">✦</span><span>SUPPLE FROM 7<small>GAMER STORE</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    <nav id="nav">
+      <a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#categorias">Categorias</a><a href="#sobre">Sobre</a>
+    </nav>
+    <div class="header-tools">
+      <input id="search" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+      <button id="openCart" class="cart-button">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">SUA LOJA GAMER COMPLETA</p>
+        <h1>EQUIPAMENTOS<br><span>PARA O SEU MUNDO</span></h1>
+        <p>PC gamer, periféricos, acessórios e muito mais.<br>Monte seu setup e jogue em outro nível.</p>
+        <a class="button" href="#produtos">VER PRODUTOS <span>→</span></a>
+        <div class="hero-tags"><span>✦ PERFORMANCE</span><span>✦ ESTILO</span><span>✦ GAMING</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustração abstrata de setup gamer">
+        <div class="glow"></div><div class="pc"><i></i><i></i><i></i></div>
+        <div class="screen"><b>SUPPLE FROM 7</b><small>LEVEL UP</small></div>
+        <div class="keyboard"></div><div class="headset">◉</div>
+        <div class="visual-caption">PLAY<br><strong>WITHOUT</strong><br>LIMITS</div>
+      </div>
+    </section>
+
+    <section class="categories wrap" id="categorias">
+      <button class="category active" data-category="Todos"><b>✦</b>Todos</button>
+      <button class="category" data-category="PC Gamer"><b>▣</b>PC Gamer</button>
+      <button class="category" data-category="Periféricos"><b>⌨</b>Periféricos</button>
+      <button class="category" data-category="Áudio"><b>♫</b>Áudio</button>
+      <button class="category" data-category="Hardware"><b>▤</b>Hardware</button>
+      <button class="category" data-category="Consoles"><b>🎮</b>Consoles</button>
+    </section>
+
+    <section class="products wrap" id="produtos">
+      <div class="section-title"><div><p class="eyebrow">ESCOLHIDOS PARA VOCÊ</p><h2>PRODUTOS EM <span>DESTAQUE</span></h2></div>
+        <select id="sort" aria-label="Ordenar produtos"><option value="featured">Em destaque</option><option value="low">Menor preço</option><option value="high">Maior preço</option><option value="name">Nome A–Z</option></select>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <p id="empty" class="empty" hidden>Nenhum produto encontrado. Tente outra busca.</p>
+    </section>
+
+    <section class="benefits wrap" id="sobre">
+      <div><b>⇢</b><span><strong>Frete grátis</strong><small>Acima de R$ 299</small></span></div>
+      <div><b>◇</b><span><strong>Compra segura</strong><small>Seus dados protegidos</small></span></div>
+      <div><b>▤</b><span><strong>Parcele em até 12x</strong><small>Consulte condições</small></span></div>
+      <div><b>♧</b><span><strong>Suporte gamer</strong><small>Conte com a gente</small></span></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer wrap">
+      <div><a class="logo" href="#inicio"><span class="logo-icon">✦</span><span>SUPPLE FROM 7<small>GAMER STORE</small></span></a><p>Mais que uma loja,<br>uma comunidade.</p></div>
+      <div><h3>Links</h3><a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#categorias">Categorias</a></div>
+      <div><h3>Contato</h3><p>✉ contato@cyclone.com</p><p>☎ (11) 98765-4321</p><p>Brasil</p></div>
+      <div><h3>Siga-nos</h3><p class="socials">◎ &nbsp; ▶ &nbsp; ♪ &nbsp; ◉</p></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Supple from 7. Todos os direitos reservados.</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="overlay" id="cartOverlay" hidden>
+    <aside class="cart-panel" aria-label="Carrinho de compras">
+      <div class="cart-heading"><h2>Seu carrinho</h2><button id="closeCart" aria-label="Fechar carrinho">×</button></div>
+      <div id="cartItems"></div>
+      <div class="subtotal"><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
+      <p class="note">Demonstração: este protótipo não processa pagamentos reais.</p>
+      <button class="button checkout" id="checkout">FINALIZAR PEDIDO →</button>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
